@@ -13,7 +13,7 @@ public class App
     }
 
     private final String getMessage() {
-    	int c = a/b;
+    	int c = b/a;
     	System.out.println("this is my test");
     	System.out.println("this is my test");
         return message;
