@@ -5,7 +5,7 @@
 	<groupId>com.example.app</groupId>
 	<artifactId>example-app</artifactId>
 	<packaging>jar</packaging>
-	<version>${project.version}</version>
+	<version>${version}</version>
 	<name>example-app</name>
 	<url>http://maven.apache.org</url>
 	<dependencies>
