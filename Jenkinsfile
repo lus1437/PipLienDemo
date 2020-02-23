@@ -24,11 +24,11 @@ pipeline {
         }
         stage('Quality'){
             environment{
-                scannerHome = tool 'SonarQubeScane'
+                 mavenHome = tool 'Maven'
             }
             steps{
-                withSonarQubeEnv('SonarQubeScane'){
-                   sh "${scannerHome}/bin/sonar-scanner"
+                withSonarQubeEnv('Sonar'){
+                  sh  " ${mavenHome}/bin/mvn sonar:sonar -Dsonar.projectName=CTS-capital"
                 }
             }
         }
