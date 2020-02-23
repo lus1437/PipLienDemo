@@ -25,11 +25,6 @@ pipeline {
                     sh "${scannerHome}/bin/sonar-scanner"
                 }
             }
-               post {
-                always {
-                    tapdQualityReport frameType: 'SonarQube', onlyNewModified: true, reportPath: 'target/surefire-reports/*.xml'
-                }
-            }
         }
         stage('Package'){
             steps{
