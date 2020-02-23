@@ -47,7 +47,7 @@
 					<!--指定生成.exec文件的存放位置 -->
 					<destFile>target/coverage-reports/jacoco-unit.exec</destFile>
 					<!--Jacoco是根据.exec文件生成最终的报告，所以需指定.exec的存放路径 -->
-					<dataFile>target/coverage-reports/jacoco-unit.html</dataFile>
+					<dataFile>target/coverage-reports/jacoco-unit.xml</dataFile>
 				</configuration>
 				<executions>
 					<execution>
