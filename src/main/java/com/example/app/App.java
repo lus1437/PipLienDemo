@@ -15,6 +15,7 @@ public class App
 
     private final String getMessage() {
     	int c = a/b;
+    	System.out.println("this is my test");
         return message;
     }
 
