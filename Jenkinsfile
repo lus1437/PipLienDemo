@@ -10,8 +10,11 @@ pipeline {
             }
         }
         stage('Test') {
+            environment{
+                mavenHome = tool 'Maven'
+            }
             steps {
-                sh 'mvn test -Dversion=${BUILD_NUMBER}'
+                  sh " ${mavenHome}/bin/mvntest -Dversion=${BUILD_NUMBER}"
             }
             post {
                 always {
