@@ -2,8 +2,11 @@ pipeline {
     agent any
     stages {
         stage('Build') {
+         environment{
+                mavenHome = tool 'Maven'
+            }
             steps {
-                sh 'mvn -B -Dversion=${BUILD_NUMBER} -DskipTests clean package'
+                sh " ${mavenHome}/bin/mvn -B -Dversion=${BUILD_NUMBER} -DskipTests clean package"
             }
         }
         stage('Test') {
