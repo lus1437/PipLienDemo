@@ -14,7 +14,7 @@ pipeline {
                 mavenHome = tool 'Maven'
             }
             steps {
-                  sh " ${mavenHome}/bin/mvntest -Dversion=${BUILD_NUMBER}"
+                  sh " ${mavenHome}/bin/mvn test -Dversion=${BUILD_NUMBER}"
             }
             post {
                 always {
