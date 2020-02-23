@@ -24,7 +24,7 @@ pipeline {
         }
         stage('Quality'){
             environment{
-                scannerHome = "/var/jenkins_home/tools/hudson.plugins.sonar.SonarRunnerInstallation/SoinarQube_Scanner"
+                scannerHome = tool 'SonarQubeScane'
             }
             steps{
                 withSonarQubeEnv('DevOpsSonarQube'){
